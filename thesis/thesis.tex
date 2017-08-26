@@ -7,6 +7,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{xcolor}
+\usepackage{blindtext}
 
 \usepackage{xmpincl}
 \includexmp{content/frontmatter/license_metadata}
@@ -55,19 +56,19 @@
 \renewcommand{\thepage}{\Roman{page}}
 \input{content/frontmatter/titlepage_generic}
 \input{content/frontmatter/copyright}
-% \input{content/frontmatter/signature_page}
-% \input{content/frontmatter/epigraph}
-% \pagestyle{plain}
-% \input{content/frontmatter/abstract}
-% \input{content/frontmatter/dedication}
-% \input{content/frontmatter/acknowledgments}
-% \tableofcontents*\clearpage
-% \listoffigures*\clearpage
-% \listoftables*
+\input{content/frontmatter/signature_page}
+\input{content/frontmatter/epigraph}
+\pagestyle{plain}
+\input{content/frontmatter/dedication}
+\input{content/frontmatter/abstract}
+\input{content/frontmatter/acknowledgments}
+\tableofcontents*\clearpage
+\listoffigures*\clearpage
+\listoftables*
 
 \mainmatter
-% \pagestyle{ruled}
-% \input{content/chapters/intro}
+\pagestyle{ruled}
+\input{content/chapters/intro}
 % \input{content/chapters/chi2}
 % \input{content/chapters/shgyield}
 % \input{content/chapters/results}
