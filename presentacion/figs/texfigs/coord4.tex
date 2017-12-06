@@ -1,0 +1,64 @@
+\documentclass[border=0pt]{standalone} 
+
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{amsmath}
+
+\begin{document}
+\tdplotsetmaincoords{60}{45}
+%
+\pgfmathsetmacro{\rvec}{.7}
+\pgfmathsetmacro{\thetavec}{20}
+\pgfmathsetmacro{\phivec}{25}
+
+\pgfmathsetmacro{\rvecV}{0.8}
+\pgfmathsetmacro{\thetavecV}{45}
+\pgfmathsetmacro{\phivecV}{115}
+%
+\begin{tikzpicture}[scale=5,tdplot_main_coords]
+
+\coordinate (O) at (0,0,0);
+\draw[line width=1.3pt,->] (0,0,0) -- (0.5,0,0) node[anchor=north east]
+{$\mathbf{x}$};
+\draw[line width=1.3pt,->] (0,0,0) -- (0,0.5,0) node[anchor=north west]
+{$\mathbf{y}$};
+\draw[line width=1.3pt,->] (0,0,0) -- (0,0,0.5) node[anchor=south]
+{$\mathbf{z}$};
+
+% spin vector
+\draw[line width=2.0pt,color=black!15!blue,->] (0,0,0) -- (0,0,0.4) 
+node[anchor=south]{};
+\draw[line width=2.0pt,color=black!15!blue,] (0.0 , 0.0, 0.2) ellipse 
+(0.08cm and 0.02cm);
+\draw[color=black!15!blue,] (-0.1, -0.1, 0.3) node [right] 
+{\Large $\boldsymbol{\sigma}^\mathrm{z}$};
+
+% vel vector
+\tdplotsetcoord{P}{\rvecV}{\thetavecV}{\phivecV}
+\draw[color=black!15!orange,line width=0.5mm,->] (O) -- (Pxy)
+node[anchor=west]{\Large $\mathcal{V}_{\boldsymbol{\sigma}^{\mathrm{z}}}$};
+\tdplotsetthetaplanecoords{\phivecV}
+% vel angle
+\draw [color=black!15!orange,thick,domain=1:115,line width=0.5mm,->] 
+plot ({0.40*cos(\x)}, {0.40*sin(\x)},0);
+\draw[color=black!15!orange] (0.25, 0.3, -0.07) node [right] 
+{\Large $\boldsymbol{\gamma_{\boldsymbol{\sigma}^\mathrm{z}}^{\perp}}$};
+
+
+% E vector
+\tdplotsetcoord{P}{\rvec}{\thetavec}{\phivec}
+\draw[color=black!15!red,line width=0.5mm,->] (O) -- (Pxy) node[anchor=west]{};
+\draw[color=black!15!red] (0.1, 0.2, -0.1) node [right] {\large $\mathbf{E}$};
+\tdplotdrawarc{(O)}{0.2}{0}{\phivec}{anchor=north west,color=black!15!green}{}
+% E angle
+\tdplotsetthetaplanecoords{\phivec}
+\draw [color=black!15!green] (0.0, 0.0, -0.1) node [right] 
+{\Large $\boldsymbol{\alpha}$};
+\draw [color=black!15!green,thick,domain=1:25,line width=0.5mm,->] 
+plot ({0.2*cos(\x)}, {0.2*sin(\x)},0);
+
+
+\end{tikzpicture}
+\end{document}
+
+

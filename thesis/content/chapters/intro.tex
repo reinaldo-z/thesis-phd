@@ -10,10 +10,11 @@ material system as a result of its interaction with the electric field of
 light. Typically, only laser light is intense enough to produce a modification
 in the optical properties of a material system\footnote{Some nonlinear
 responses, like luminescence of dye molecules, were discovered previous to the
-development of the laser}.
-% 
-The nonlinearity of those phenomena came from the fact that their manifestation
-do not depend in a linear manner on the strength of the optical applied field.
+development of the laser.}. The nonlinearity of those phenomena came from the
+fact that their manifestation do not depend in a linear manner on the strength
+of the optical applied field. The field of nonlinear optics now extends from
+fundamental studies of the interaction of light with matter to applications
+such as laser frequency conversion, optical switching, and optical tests.
 
 In 1917, Albert Einstein published the theoretical possibility of amplification
 of radiation through stimulated emission with coherence \cite{rawicz08PSPIE}
@@ -54,13 +55,13 @@ high energy, ultrashort pulsed lasers.
 \subsection{Nonlinear polarization}
 \label{sec:nonlinear_polarization}
 
-To describe the optical nonlinearity, consider how the polarization of a
-material $P (t)$, defined as the dipole moment per unit volume, depends on the
-strength of an applied optical field $E (t)$. In the case of linear optics, the
-polarization dependence is lineal with respect to the strength of electric
-field and can be described as
+To describe the optical nonlinearity we need to consider how the polarization
+of a material $P(\omega)$, defined as the dipole moment per unit volume,
+depends on the strength of an applied optical field $E (t)$. In the case of
+linear optics, the polarization dependence is lineal with respect to the
+strength of electric field and can be described as
 \begin{equation}
-P (t) = \epsilon_{0} \chi^{(1)} E (t),
+P (\omega) = \epsilon_{0} \chi^{(1)} E (\omega),
 \label{eq:linearpol}
 \end{equation}
 where $\epsilon_{0}$ is the permittivity of free space and $\chi^{(1)}$ is the
@@ -69,74 +70,406 @@ linear susceptibility. In nonlinear optics, the optical response of Eq.
 series in the field strength as 
 \begin{equation}
 \begin{aligned}
-P 
+P (\omega)
 =& 
-\epsilon_{0} [ \chi^{(1)} E (t) + \chi^{(2)} E^{2} (t) + \chi^{(3)}
-E^{3} (t) + \cdots ]
+\epsilon_{0} [ 
+\chi^{(1)} E (\omega) + 
+\chi^{(2)} E^{2} (\omega) + 
+\chi^{(3)} E^{3} (\omega) + 
+\cdots ]
 \\
 =&
-P^{(1)} (t) + P^{(2)} (t) + P^{(3)}
-(t) + \cdots
+P^{(1)} (\omega) + P^{(2)} (\omega) + P^{(3)} (\omega) + \cdots
 .
 \label{eq:polarizations}
 \end{aligned}
 \end{equation}
 The $\chi^{(n)}$ expression is known as the $n^{\text{th}}$ nonlinear optical
 susceptibility; the common linear effects presented in most media are described
-only by $P^{(1)} (t)$ that reduces the expression \eqref{eq:polarizations} to
-\eqref{eq:linearpol}. Considering that the electric field $E$ written here as a
-scalar must be considered a vector, then $\chi^{(1)}$ must be a second-rank
-tensor, $\chi^{(2)}$ a third-rank tensor and so on, and they depend on the
-frequencies of the applied fields \cite{boyd03nonlinear}.
-
-The nonlinear polarization can also be described threating the incident
-electric field as a superposition of plane waves. If we assume that the
-electric field is written as \cite{anderson16theoretical}
+only by $P^{(1)} (\omega)$ that reduces the expression \eqref{eq:polarizations}
+to\eqref{eq:linearpol}. 
+% 
+The reason why the polarization has a determining role in the characterization
+of nonlinear optical phenomena comes from the fact that time-varying
+polarization can produce new components of the electromagnetic field. This can
+be shown using the wave equation in nonlinear media that is written as
+\cite{boyd03book}
 \begin{equation}
-\mathbf{E} (\mathbf{r},t) = 
-\sum_{n} \mathbf{E}_{n} (\mathbf{r},t)
+\nabla^{2} E - \frac{n^2}{c^2} \frac{\partial^{2} E}{\partial t^{2}} = 
+\frac{1}{\epsilon_{0} c^{2}}\frac{\partial^{2} P^{NL}}{\partial t^{2}}
+,
+\label{eq:waveeq}
+\end{equation}
+where $n$ is the usual linear refractive index and $c$ is the speed of light in
+vacuum. This is an inhomogeneous wave equation in which the polarization $P^
+{NL}$ related with the nonlinear response depends on the electric field $E$.
+The expression $\partial^{2}P^{NL}/\partial t^{2}$ is a measure of the
+acceleration of the charges in the media that which generate new
+electromagnetic radiation.
+
+Considering that the electric field $E$ written here as a scalar must be
+considered a vector, then $\chi^{(1)}$ must be a second-rank tensor,
+$\chi^{(2)}$ a third-rank tensor and so on, and they depend on the frequencies
+of the applied fields \cite{boyd03book}. The nonlinear polarization can also be
+described threating the incident electric field as a superposition of plane
+waves. If we assume that the electric field is written as \cite{janner98PHDT}
+\begin{equation}
+\mathbf{E} (\mathbf{r},\omega) = 
+\sum_{n} \mathbf{E}_{n} (\mathbf{r},\omega)
 \label{eq:planar1}
 \end{equation}
 where
 \begin{equation}
-\mathbf{E}_{n} (\mathbf{r},t) = 
+\mathbf{E}_{n} (\mathbf{r},\omega) = 
 \mathbf{E}_{n} (\mathbf{r}) e^{-i\omega_{n} t} +  c.c.
 ,
 \label{eq:planar2}
 \end{equation}
-and the, from Eq. \eqref{eq:polarizations} we can write 
+and then, from Eq. \eqref{eq:polarizations} we can write 
 \begin{equation}
-\mathbf{P} (\mathbf{r},t) =
-\sum_{n} \mathbf{P} (\omega_{n}) e^{-i\omega_{n}t}
+\mathbf{P} (\mathbf{r},\omega) =
+\sum_{n} \mathbf{P}^{(n)} (\omega_{n}) e^{-i\omega_{n}t}
 .
-\label{eq:polarizations}
+\label{eq:vec-polarization}
 \end{equation}
-Then, we can define the second order nonlinear polarization, that describes the
-second order effects in which we have interest, in terms of the second order
-susceptibility as 
+Then, we can define the $n^{\mathrm{th}}$ order nonlinear polarization in terms
+of the $n^{\mathrm{th}}$ order susceptibility as
 \begin{equation}
-P^{a} (\omega_{n} + \omega_m) =
-\epsilon_{0} \sum_{\mathrm{bc}} \sum_{(nm)} 
-\mathbf{\chi}^{(2), \mathrm{abc}}
+\begin{aligned}
+\mathbf{P}^{(n)} & (\mathbf{r},\Omega) = 
+&\epsilon_{0} \sum_{\mathrm{bc}} \sum_{\Omega} 
+\boldsymbol{\chi}^{(n)}
 \left(
--(\omega_{n} + \omega_{m}); \omega_{n} + \omega_{m}
+-\Omega; \omega_{1}, \omega_{2}, \ldots, \omega_{n}
 \right)
-E^{\mathrm{b}} (\omega_{n}) E^{\mathrm{c}} (\omega_{m})
+\mathbf{E}(\mathbf{r},\omega_{1}) \mathbf{E}(\mathbf{r},\omega_{2}) (\cdots) 
+\mathbf{E}(\mathbf{r},\omega_{n})
 ,
+\end{aligned}
 \end{equation}
-where the roman superscripts $\mathrm{abc}$ denote to Cartesian components of
-the fields and $(nm)$ indicate that $n$ and $m$ can be varied while the sum
-$\omega_{n} + \omega_{m}$ remains fixed. Making the analysis when we have two
-incoming scalar fields with frequencies $\omega_{1}$ and $\omega{2}$
+where $\Omega = \omega_{1} + \omega_{2} + \ldots + \omega_{n}$. Making emphasys
+about we are interested in second order effects, we can analyze the case when
+we have two incoming fields, with frequencies $\omega_ {1}$ and
+$\omega_{2}$, and write the total incident electric field as
+\cite{anderson16PHDT}
 \begin{equation}
-E(t) = E_{1} e^{-i\omega_{1}t} + E_{2} e^{-i\omega_{2}t} + c.c.
-, 
+\mathbf{E}(\mathbf{r},\omega) = 
+\mathbf{E}_{1}(\mathbf{r}) e^{-i\omega_{1}t} + 
+\mathbf{E}_{2}(\mathbf{r}) e^{-i\omega_{2}t} + c.c.
+. 
 \label{eq:two-fields}
 \end{equation}
-we have from Eq. \eqref{eq:polarizations} 
+Then, from Eq. \eqref{eq:polarizations}, the second order polarization can be
+written as
+\begin{equation}
+\mathbf{P}^{(2)} (\mathbf{r};\omega) = 
+\epsilon_{0} \boldsymbol{\chi}^{(2)} [\mathbf{E}(\mathbf{r},\omega)]^{2}
+,
+\label{eq:second-pol-1}
+\end{equation}
+and using Eq. \eqref{eq:two-fields} and omitting the $(\mathbf{r},\omega)$
+dependence in the electric fields we can write
+\begin{equation}
+\begin{aligned}
+\mathbf{P}^{(2)} (\mathbf{r};\omega) 
+= &\,\,
+\epsilon_{0} \boldsymbol{\chi}^{(2)}
+[ \mathbf{E}_{1}^2 e^{-i2\omega_{1}t} + 
+\mathbf{E}_{2}^{2} e^{-i2\omega_{2}t} 
+\\
+&+
+2\mathbf{E}_{1}\mathbf{E}_{2} e^{-i(\omega_{1} + \omega_{2})t} + 
+2\mathbf{E}_{1}\mathbf{E}_{2}^{*} e^{-i(\omega_{1} - \omega_{2})t} + c.c. ] \\
+&+
+2 \epsilon_{0} \boldsymbol{\chi}^{(2)} 
+[ \mathbf{E}_{1}\mathbf{E}_{1}^{*} + \mathbf{E}_{2}\mathbf{E}_{2}^{*} ]
+.
+\end{aligned}
+\end{equation}
+Separating this expression in its components and the nonlinear effect produced
+we have
+\begin{subequations}
+\begin{align}
+\mathbf{P}(\mathbf{r};2\omega_{1}) &= \epsilon_{0} 
+\boldsymbol{\chi}^{(2)} \mathbf{E}_{1}^{2} e^{-i2\omega_{1}t} +c.c., 
+\label{eq:shg-1}
+\\
+\mathbf{P}(\mathbf{r};2\omega_{1}) &= \epsilon_{0} 
+\boldsymbol{\chi}^{(2)} \mathbf{E}_{2}^{2} e^{-i2\omega_{2}t} +c.c.,
+\label{eq:shg2}
+\\
+\mathbf{P}(\mathbf{r};\omega_{1} + \omega_{2}) &= 2\epsilon_{0}
+\boldsymbol{\chi}^{(2)} \mathbf{E}_{1} 
+\mathbf{E}_{2} e^{-i(\omega_{1}+\omega_{2})t} +c.c, 
+\label{eq:sfg}
+\\
+\mathbf{P}(\mathbf{r};\omega_{1} - \omega_{2}) &= 2\epsilon_{0}
+\boldsymbol{\chi}^{(2)} \mathbf{E}_{1} 
+\mathbf{E}_{2}^{*} e^{-i(\omega_{1}+\omega_{2})t} +c.c.,
+\label{eq:dfg}
+\\
+\mathbf{P}(\mathbf{r};0) &= 2\epsilon_{0}
+\boldsymbol{\chi}^{(2)} (\mathbf{E}_{1}\mathbf{E}_{1}^{*} + 
+\mathbf{E}_{2}\mathbf{E}_{2}^{*}) + c.c..
+\label{eq:or}
+\end{align}
+\label{eq:second-responses}
+\end{subequations}
+The expressions of Eq. \eqref{eq:second-responses} correspond to the following
+second order optical processes of light interacting with a nonlinear media:
+\begin{itemize}\itemsep0pt
+    \item Second harmonic generation (SHG, Eqns. \ref{eq:shg-1} and
+    \ref{eq:shg2}) is a process in which photons with same frequency produce
+    new photons with twice the energy and frequency and half the wavelength,
+    respective to the initial photons.
+    \item Sum frequency generation (SFG, Eq. \ref{eq:sfg}) is a process in
+    which photons with different frequency generate photons with frequency
+    equal to the sum of the frequencies of the originals.
+    \item Difference frequency generation (DFG, Eq. \ref{eq:dfg}) is a
+    process in which the frequency of the generated photons is the difference
+    between two other photon frequencies.
+    \item Optical rectification (OR, Eq. \ref{eq:or}) is a process that
+    consists of the generation of a quasi-DC polarization.
+\end{itemize}
+In table \ref{tab:optical-processes} are presented the most common optical
+processes of low order \cite{janner98PHDT}.
 
+\begin{table}[tb]
+\caption{Optical processes described with $\boldsymbol{\chi}^{(n)}$ .
+\label{tab:optical-processes}}
+\centering
+\scalebox{0.9}{
+\begin{tabular}{ c c c p{9cm} c}
+\hline
+\hline 
+\multicolumn{3}{c}
+{\,\,\,
+$\boldsymbol{\chi}^{(n)}(-(\omega_{1} + \ldots + \omega_{n});\omega_{1},\ldots,
+\omega_{n})$}
+& \textbf{Process} & \textbf{Order} \\
+\hline 
+$-\omega_{1}$ & ; & $\omega_{1}$
+& Linear absorption / emission and refractive index & 1 \\
+\hline
+$0$ & ; & $\omega_{1},-\omega_{1}$
+& Optical rectification (OR) & 2 \\
+$-\omega_{1}$ & ; & $0,\omega_{1}$
+& Pockels effect & 2 \\
+$-2\omega_{1}$ & ; & $\omega_{1},\omega_{1}$
+& Second-harmonic generation (SHG) & 2 \\
+$-(\omega_{1}+\omega_{2})$ & ; & $\omega_{1},\omega_{2}$
+& Sum-frequency generation (SFG) & 2 \\
+$-(\omega_{1}-\omega_{2})$ & ; & $\omega_{1},\omega_{2}$
+& Difference-frequency generation (DFG) / 
+Parametric amplification and oscillation & 2 \\
+\hline
+$-\omega_{1}$ & ; & $0,0,\omega_{1}$
+& d.c. Kerr effect & 3 \\
+$-2\omega_{1}$ & ; & $0,\omega_{1},\omega_{1}$
+& Electric Field induced SHG (EFISH) & 3 \\
+$-3\omega_{1}$ & ; & $\omega_{1},\omega_{1},\omega_{1}$
+& Third-harmonic generation (THG) & 3 \\
+$-\omega_{1}$ & ; & $\omega_{1},-\omega_{1},\omega_{1}$
+& Degenerate four-wave mixing (DFWM) & 3 \\
+$-\omega_{1}$ & ; & $-\omega_{2},\omega_{2},\omega_{1}$
+& Two-photon absorption (TPA) / ionization / emission & 3 \\ 
+\hline
+\hline
+\end{tabular}}
+\end{table}
+
+\section{Symmetry consequences in nonlinear media}
+\label{sec:symmetry_consequences_in_media}
+
+The symmetry of each them plays a very important role in nonlinear optics. As
+mentioned in the beginning of this section, $\boldsymbol{\chi}^{(2)}$ is a
+third rank tensor, and it has 27 elements. The number of non-zero or
+independent elements depends on the symmetry properties of the nonlinear media
+in question. In crystallography, there are 32 crystal classes and we can find
+two big groups, centrosymmetric and non-centrosymmetric. A centrosymmetric
+media is a system with an inversion of symmetry center. It means that the
+structure has a point $(x,y,z)$ in the unit cell that is equivalent at
+$(-x,-y,-z)$. Then, if we are in a centrosymmetric media, the second order
+nonlinear polarization can be written as Eq. \eqref{eq:second-pol-1}. If the
+system presents inversion of symmetry, a inversion in the coordinates will
+change both, the electric field and the polarization, since they are polar
+vectors \cite{anderson16PHDT, jackson98book}, and so
+\begin{equation}
+\begin{aligned}
+- \mathbf{P}^{(2)} (\mathbf{r},\omega) 
+&= \epsilon_{0} \boldsymbol{\chi}^{(2)}[\mathbf{E}(-\mathbf{r},\omega)]^{2}
+, \\
+&= \epsilon_{0} \boldsymbol{\chi}^{(2)}[-\mathbf{E}(\mathbf{r},\omega)]^{2}
+, \\
+&= \epsilon_{0} \boldsymbol{\chi}^{(2)}[ \mathbf{E}(\mathbf{r},\omega)]^{2}
+.
+\end{aligned}
+\end{equation}
+So we have that $- \mathbf{P}^{(2)} (\mathbf{r},\omega) = \mathbf{P}^{(2)}
+(\mathbf{r},\omega)$, and since we assume that $\mathbf{E} (\mathbf{r},\omega)
+\neq 0$, then we conclude that
+\begin{equation}
+\boldsymbol{\chi}^{(2)} = 0
+.
+\end{equation}
+In table \ref{tab:nonvanishing} we present the the form of the second order
+susceptibility tensor for each of the 32 crystal classes with each element
+denoted by Cartesian indices \cite{boyd03book}.
+
+\begin{table}[H]
+\centering
+\caption{Form of the second order susceptibility tensor for each of the 32
+crystal classes. Each element is denoted by its Cartesian indices.
+\label{tab:nonvanishing}}
+\begin{tabular}{llp{9cm}}
+\hline
+\hline
+\textbf{Crystal system} & 
+\textbf{Crystal class} & 
+\textbf{Nonvanishing Tensor Elements} 
+\\
+\hline
+Triclinic &
+$1=C_{1}$ &
+{All elements are independent and nonzero }
+\\ &
+$\overline{1}=S_{2}$
+&
+{Each element vanishes}
+\\
+\hline
+Monoclinic & 
+$2=C_{2}$ & 
+$xyz$, $xzy$, $xxy$, $xyx$, $yxx$, $yyy$, $yzz$, $yzx$, $yxz$,
+$zyz$, $zzy$, $zxy$, $zyx$ (twofold axis parallel to $\hat{y}$)
+\\ &
+$m=C_{1h} $ & 
+$xxx$, $xyy$, $xzz$, $xzx$, $xxz$, $yyz$, $yzy$, $yxy$, $yyx$,
+$zxx$, $zyy$, $zzz$, $zzx$, $zxz$ (mirror plane perpendicular to $\hat{y}$)
+\\ &
+$2/m=C_{2h}$ &
+{Each element vanishes}
+\\
+\hline
+Orthorhombic &
+$222=D_{2}$ &
+$xyz$, $xzy$, $yzx$, $yxz$, $zxy$, $zyx$
+\\ &
+$mm2=C_{2v}$ &
+Each element vanishes
+\\
+\hline
+Tetragonal &
+$4=C_{4}$ & 
+$xyz=-yxz$, $xzy=-yzx$, $xzx=yzy$, $xxz=yyz$, $zxx=zyy$, 
+$zzz$, $zxy=-zyx$
+\\ &
+$\overline{4}=S_{4}$ &
+$xyz=yxz$, $xzy=yzx$, $xzx=-yzy$, $xxz=-yyz$, $zxx=-zyy$, $zxy=zyx$
+\\ &
+$422=D_{4}$ &
+$xyz=-yxz$, $xzy=-yzx$, $zxy=-zyx$
+\\ &
+$4mm = C_{4v} $ &
+$xzx=yzy$, $xxz=yyz$, $zxx=zyy$, $zzz$
+\\ &
+$\overline{4}2m = D_{2d} $ &
+$xyz=yxz$, $xzy=yzx$, $zxy=zyx$
+\\ &
+$4/m = C_{4h} $ &
+Each element vanishes
+\\ &
+$4/mmm = D_{4h}$ &
+Each element vanishes
+\\
+\hline
+Cubic &
+$432 = O$ &
+$xyz=-xzy=yzx=-yxz=zxy=-zyx$
+\\ &
+$\overline{4}3 m = T_{d}$ &
+$xyz=xzy=yzx=yxz=zxy=zyx$
+\\ &
+$23 = T$ &
+$xyz=yzx=zxy$, $xzy=yxz=zyx$
+\\ &
+$m3 = T_{h}$, $m3m = O_{h}$ &
+Each element vanishes
+\\
+\hline
+Trigonal &
+$3=C_{3}$ &
+$xxx=-xyy=-yyz=-yxy$, $xyz=-yxz$, $xzy=-yzx$, $xzx=yzy$, $xxz=yyz$,
+$yyy=-yxx=-xxy=-xyx$, $zxx=zyy$, $zzz$, $zxy=-zyx$
+\\ &
+$32=D_{3}$ &
+$xxx=-xyy=-yyx=-yxy$, $xyz=-yxz$, $xzy=-yzx$, $zxy=-zyx$
+\\ &
+$3m = C_{3v}$ &
+$xzx=yzy$, $xxz=yyz$, $zxx=zyy$, $zzz$, $yyy=-yxx=-xxy=-xyx$ (mirror plane
+perpendicular to $\hat{x}$)
+\\ &
+$\overline{3}= S_{6}$, $\overline{3}m=D_{3d}$ &
+Each element vanishes
+\\
+\hline
+Hexagonal &
+$6=C_{6}$ &
+$xyz=-yxz$, $xzy=-yzx$, $xzx=yzy$, $xxz=yyz$, $zxx=zyy$, $zzz$, $zxy=-zyx$
+\\ &
+$\overline{6}=C_{3h}$ &
+$xxx=-xyy=-yxy=-yyx$, $yyy=-yxx=-xyx=-xxy$
+\\ &
+$622=D_{6}$ &
+$xyz=-yxz$, $xzy=-yxz$, $zxy=-zyx$
+\\ &
+$6mm = C_{6v}$ &
+$xzx=yzy$, $xxz=yyz$, $zxx=zyy$, $zzz$
+\\ &
+$\overline{6}m2=D_{3h}$ &
+$yyy=-yxx=-xxy=-xyx$
+\\ &
+$6/m = C_{6h}$ &
+Each element vanishes
+\\ &
+$6/mmm = D_{6h}$ &
+Each element vanishes
+\\
+\hline
+\hline
+\end{tabular}
+\end{table}
+
+\section{Graphene and Hydrogenated Graphene}
+\label{sec:graphene_and_hydrogenated_graphene}
+
+Graphene is an allotrope of carbon consisting of planar mono-atomic sheets of
+$sp^{2}$ bonded carbon atoms. This synthetic structure is a densely packed 
+two-dimensional equilateral triangular crystal lattice \cite{geim07Nat} with a
+carbon-carbon chemical bond length of 0.142\,nm \cite{rao09JMC}. 
+% 
+In 2010 the Nobel Prize in Physics was awarded to Andre Geim and Konstantin
+Novoselov for their breaking new work about graphene\footnote{Nobel Foundation
+announcement of
+\href{http://nobelprize.org/nobel_prizes/physics/laureates/2010/}{Nobel Price},
+2010.}.
+
+\subsection{Graphene properties}
+\label{sec:graphene_properties}
+
+Due to the properties that the structure presents, graphene became one of the
+most relevant research topics in condensed matter physics and material science
+for the last eight years \cite{geim07Nat, rao09JMC, li08NN,
+katsnelson07MT, rao10PChL} since its first synthesis in 2004.
 
 \stopcontents[chapters]
+
+
+
+
+
+
+
 
 
 

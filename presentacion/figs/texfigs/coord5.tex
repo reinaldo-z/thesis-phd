@@ -1,0 +1,80 @@
+\documentclass[border=0pt]{standalone} 
+
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{amsmath}
+
+\begin{document}
+\tdplotsetmaincoords{60}{45}
+%
+\pgfmathsetmacro{\rvec}{0.4}
+\pgfmathsetmacro{\thetavec}{30}
+\pgfmathsetmacro{\phivec}{55}
+
+\pgfmathsetmacro{\rvecE}{0.3}
+\pgfmathsetmacro{\thetavecE}{90}
+\pgfmathsetmacro{\phivecE}{25}
+%
+
+\begin{tikzpicture}[scale=5,tdplot_main_coords]
+
+\coordinate (O) at (0,0,0);
+\draw[line width=1.3pt,->] (0,0,0) -- (0.5,0,0) node[anchor=north east]
+{$\mathbf{x}$};
+\draw[line width=1.3pt,->] (0,0,0) -- (0,0.6,0) node[anchor=north west]
+{$\mathbf{y}$};
+\draw[line width=1.3pt,->] (0,0,0) -- (0,0,0.5) node[anchor=south]
+{$\mathbf{z}$};
+
+% Vel vector
+\draw[line width=1.3pt,->,color=black!15!orange] (0,0,0) -- (0,0.5,0) 
+node[anchor=south east]{$\boldsymbol{\mathcal{V}_{\mathrm{y}}}$};
+
+
+% E vector
+\tdplotsetcoord{P}{\rvecE}{\thetavecE}{\phivecE}
+\draw[color=black!15!red,line width=0.5mm,->] (O) -- (Pxy) node[anchor=west]{};
+\draw[color=black!15!red] (0.25, 0.12, 0.0) node [right] {\large $\mathbf{E}$};
+% E angle
+\tdplotsetthetaplanecoords{\phivecE}
+\draw [color=black!15!green,thick,domain=1:25,line width=0.5mm,->] 
+plot ({0.25*cos(\x)}, {0.25*sin(\x)},0);
+\draw [color=black!15!green] (0.3, -0.12, 0.0) node [right] 
+{\Large $\boldsymbol{\alpha}$};
+
+% spin vector
+\draw[line width=2.0pt,rotate around={-40:(0.2,0.2,0,2)},color=black!15!blue] 
+(0.03 , 0.03, 0.03) ellipse (0.08cm and 0.02cm);
+\tdplotsetcoord{P}{\rvec}{\thetavec}{\phivec}
+\draw[-stealth,line width=2.0pt,color=black!15!blue,->] 
+(O) -- (P) node[above right] {\Large $\boldsymbol{\sigma}$};
+\draw[dashed,line width=1.0pt,color=black!15!blue,] (O) -- (Pxy);
+\draw[dashed,line width=1.0pt,color=black!15!blue,] (P) -- (Pxy);
+\tdplotdrawarc{(O)}{0.15}{0}{\phivec}{anchor=north east,color=black!15!blue}
+{\Large $\boldsymbol{\varphi_{y}} \,$}
+\tdplotsetthetaplanecoords{\phivec}
+\tdplotdrawarc[tdplot_rotated_coords,color=black!15!blue,line width=1.5pt]
+{(0,0,0)}{0.17}{0}%
+{\thetavec}{anchor=north east,color=black!15!blue}
+{\Large $\boldsymbol{\theta_{y}}$ \,}
+
+% phi angle
+\tdplotsetthetaplanecoords{\phivecE}
+\draw [color=black!15!blue,thick,domain=1:55,line width=0.5mm,->] 
+plot ({0.15*cos(\x)}, {0.15*sin(\x)},0);
+
+
+\end{tikzpicture}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+

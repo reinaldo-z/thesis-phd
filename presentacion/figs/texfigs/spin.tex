@@ -1,0 +1,40 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{amsmath}
+\usetikzlibrary{shapes.geometric}
+\tdplotsetmaincoords{60}{110}
+
+\begin{document}
+
+\begin{tikzpicture}[tdplot_main_coords]
+
+\draw [color=black!15!blue,] (0.0, 0.0, 1.0) node [right] 
+{$\boldsymbol{\sigma}^{\mathbf{b}}$};
+\draw[line width=0.5mm,color=black!15!blue,,->] ( 0.0, 0.0, 0.0) -- 
+( 0.0, 0.0, 1.0 );
+\draw[line width=0.5mm,color=black!15!blue,] (0.0 , 0.0, 0.5) ellipse 
+(0.40cm and 0.10cm);
+\draw[line width=0.5mm,green,->] ( 0.0, 0.0, 0.0) -- ( 0.0, 1.0, 0.0 );
+\draw [green] (0.0, 0.5, 0.2) node [right] {$\mathbf{\hat{a}}$};
+
+\end{tikzpicture}
+
+\end{document}
+
+
+
+
+
+
+\begin{align*}
+\hspace{-4mm}
+\mathcal{V}_{\sigma^{\mathrm{b}}}(\omega,\alpha)
+\equiv
+\left[
+\left(\mathcal{V}^{\mathrm{xb}}(\omega,\alpha)\right)^{2}\ +
+\right. \\ \left.
+\left(\mathcal{V}^{\mathrm{yb}}(\omega,\alpha)\right)^{2}\ 
+\right]
+\label{eq:vs-mag}
+\end{align*}
