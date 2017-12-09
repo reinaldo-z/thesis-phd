@@ -1,0 +1,93 @@
+\documentclass[border=0pt]{standalone} 
+
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{amsmath}
+
+\begin{document}
+\tdplotsetmaincoords{60}{45}
+%
+\pgfmathsetmacro{\rvec}{0.4}
+\pgfmathsetmacro{\thetavec}{12}
+\pgfmathsetmacro{\phivec}{80}
+\pgfmathsetmacro{\phivecf}{180}
+
+\pgfmathsetmacro{\rvecE}{0.3}
+\pgfmathsetmacro{\thetavecE}{90}
+\pgfmathsetmacro{\phivecE}{35}
+%
+
+\begin{tikzpicture}[scale=5,tdplot_main_coords]
+
+\coordinate (O) at (0,0,0);
+\draw[line width=1.3pt,->] (-0.3, 0.0, 0.0) -- (0.5,0,0) 
+node[anchor=north east]{$\mathbf{x}$};
+\draw[line width=1.3pt,->] ( 0.0,-0.2, 0.0) -- (0,0.6,0) 
+node[anchor=north west]{$\mathbf{y}$};
+\draw[line width=1.3pt,->] ( 0.0, 0.0,-0.1) -- (0,0,0.5) 
+node[anchor=south]{$\mathbf{z}$};
+
+% Vel vector
+\draw[line width=1.3pt,->,color=black!15!orange] (0,0,0) -- (0.0, 0.5, 0.0) 
+node[anchor=south east]{$\boldsymbol{\mathcal{V}_{\mathrm{y}}}$};
+
+
+% E vector
+\tdplotsetcoord{P}{\rvecE}{\thetavecE}{\phivecE}
+\draw[color=black!15!red,line width=0.5mm,->] (O) -- (Pxy) node[anchor=west]{};
+\draw[color=black!15!red] (0.23, 0.18, 0.0) node [right] {\large $\mathbf{E}$};
+% E angle
+\tdplotsetthetaplanecoords{\phivecE}
+% \draw [color=black!15!green,thick,domain=1:35,line width=0.5mm,->] 
+% plot ({0.25*cos(\x)}, {0.25*sin(\x)},0);
+% \draw [color=black!15!green] (0.3, -0.12, 0.0) node [right] 
+% {\Large $\boldsymbol{\alpha}$};
+
+% spin vector
+\tdplotsetcoord{P}{\rvec}{\thetavec}{\phivec}
+\draw[-stealth,line width=1.5pt,color=black!15!blue,->] 
+(O) -- (P) node[above right] {\Large $\boldsymbol{\sigma}$};
+\draw[-stealth,line width=1.5pt,color=black!15!blue,->] 
+(O) -- (P) node[above right] {};
+\draw[dashed,line width=1.0pt,color=black!15!blue,fill] (O) -- (Pxy);
+\draw[dashed,line width=1.0pt,color=black!15!blue,] (P) -- (Pxy);
+\tdplotdrawarc{(O)}{0.15}{0}{\phivec}{anchor=south west,color=black!15!blue}
+{};
+% spin vector 2
+\tdplotsetcoord{P}{\rvec}{\thetavec}{\phivecf}
+\draw[-stealth,line width=1.5pt,color=white!45!blue,->] 
+(O) -- (P) node[above right] {};
+\draw[-stealth,line width=1.5pt,color=white!45!blue,->] 
+(O) -- (P) node[above right] {};
+\draw[dashed,line width=1.0pt,color=white!45!blue,fill] (O) -- (Pxy);
+\draw[dashed,line width=1.0pt,color=white!45!blue,] (P) -- (Pxy);
+
+% \tdplotsetthetaplanecoords{\phivec}
+% \tdplotdrawarc[tdplot_rotated_coords,color=black!15!blue,line width=1.5pt]
+% {(0,0,0)}{0.17}{0}%
+% {\thetavec}{anchor=north east,color=black!15!blue}{}
+% phi angle
+\tdplotsetthetaplanecoords{\phivecE}
+\draw [color=white!45!blue,thick,domain=80:180,line width=0.5mm,<->] 
+plot ({0.15*cos(\x)}, {0.15*sin(\x)},0);
+\draw [color=black!15!blue,thick,domain=0:80,line width=0.5mm,->] 
+plot ({0.15*cos(\x)}, {0.15*sin(\x)},0);
+\draw[color=white!45!blue] (-0.15,-0.09, 0.0) node []
+l}}$};
+% \draw[color=black!15!blue] (-0.09, 0.00, 0.22) node []
+% {\Large $\boldsymbol{\theta_{x}}$};
+
+\end{tikzpicture}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+

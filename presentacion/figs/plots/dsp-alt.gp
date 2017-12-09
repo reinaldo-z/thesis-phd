@@ -10,7 +10,8 @@ set rmargin 2
 set xtics nomirror
 set ytics nomirror
 set zeroaxis lw 1 lt 2 lc 0
-set label 1 "{\\huge Alt}"   at graph 0.75, graph 0.15 
+
+set label 1 '\huge Alt' at graph 0.5 , 0.9
 
 set output "dsp-alt.mp"
 set xrange [0.716:0.726]
