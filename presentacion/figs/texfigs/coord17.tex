@@ -1,0 +1,70 @@
+\documentclass[border=0pt]{standalone} 
+
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{amsmath}
+
+\begin{document}
+\tdplotsetmaincoords{60}{35}
+%
+\pgfmathsetmacro{\rvec}{0.4}
+\pgfmathsetmacro{\thetavec}{35}
+\pgfmathsetmacro{\phivec}{-46}
+
+\pgfmathsetmacro{\rvecE}{0.3}
+\pgfmathsetmacro{\thetavecE}{35}
+\pgfmathsetmacro{\phivecE}{134}
+%
+
+\begin{tikzpicture}[scale=5,tdplot_main_coords]
+
+\coordinate (O) at (0,0,0);
+\draw[line width=1.3pt,->] (-0.1,0,0) -- (0.3,0,0) node[anchor=north east]
+{$\mathbf{x}$};
+\draw[line width=1.3pt,->] (0,-0.20,0) -- (0,0.3,0) node[anchor=south]
+{$\mathbf{y}$};
+\draw[line width=1.3pt,->] (0,0,0) -- (0,0,0.4) node[anchor=south]
+{$\mathbf{z}$};
+
+% spin vector
+\tdplotsetcoord{P}{\rvec}{\thetavec}{\phivec}
+\draw[-stealth,line width=2.0pt,color=black!15!blue,->] 
+(O) -- (P) node[above right] {};
+\draw[line width=1.0pt,color=black!15!blue,] (O) -- (Pxy);
+\draw[line width=1.0pt,color=black!15!blue,] (P) -- (Pxy);
+\fill[color=black!15!blue,opacity=0.40] (Px) -- (Pxy) -- (Py) -- (O);
+\fill[color=black!15!blue,opacity=0.50] (O) -- (Pxy) -- (P);
+\draw[line width=0.5pt,color=black!15!blue,] (O) -- (Px) -- (Pxy) -- (Py) -- 
+(O) -- (Pz) -- (Pxz) -- (Px) -- (O) -- (Pz) -- (Pyz) -- (Py) -- (Pyz) -- (P) 
+-- (Pxz);
+\tdplotdrawarc{(O)}{0.15}{0}{\phivec}{anchor=north east,color=black!15!blue}{};
+\tdplotsetthetaplanecoords{\phivec};
+\tdplotdrawarc[tdplot_rotated_coords,color=black!15!blue,line width=1.5pt]
+{(0,0,0)}{0.25}{0}%
+{\thetavec}{anchor=north east,color=black!15!blue}
+{};
+\draw[color=black!15!blue]( 0.06,0.03,0.25)node{\Large $\boldsymbol{\sigma}$};
+\draw[color=black!15!blue](-0.02,-0.04,0.28)node{\Large $\boldsymbol{\theta}$};
+\draw[color=black!15!blue]( 0.15,0.08,0.00)node{\Large $\boldsymbol{\varphi}$};
+
+
+% phi angle
+\tdplotsetthetaplanecoords{\phivecE}
+\draw [color=black!15!blue,thick,domain=-0:-46,line width=0.5mm,->] 
+plot ({0.15*cos(\x)}, {0.15*sin(\x)},0);
+
+
+\end{tikzpicture}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+

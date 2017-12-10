@@ -435,11 +435,11 @@ noncentrosymmetric crystals.\footnote[frame]{\tiny Boyd, Robert W. Nonlinear opt
 \column{0.5\textwidth}
 
 \begin{center}
-\includegraphics[width=0.8\textwidth]{figs/row.png}\\
+\includegraphics[width=1.0\textwidth]{figs/row1.png}\\
 % {\small 12.5\% of hydrogenation}
 
 \vspace{7mm}
-\includegraphics[width=0.8\textwidth]{figs/alt1.png}\\
+\includegraphics[width=1.0\textwidth]{figs/alt3.png}\\
 % {\small 50\% of hydrogenation}
 
 
@@ -450,11 +450,11 @@ noncentrosymmetric crystals.\footnote[frame]{\tiny Boyd, Robert W. Nonlinear opt
 
 \centering
 \begin{center}
-\includegraphics[width=0.8\textwidth]{figs/up1.png}\\
+\includegraphics[width=1.0\textwidth]{figs/up3.png}\\
 % {\small 50\% of hydrogenation}
 
 \vspace{7mm}
-\includegraphics[width=0.8\textwidth]{figs/boat.png}\\
+\includegraphics[width=1.0\textwidth]{figs/boat1.png}\\
 % {\small 100\% of hydrogenation}
 
 \vspace{3mm}
@@ -743,7 +743,7 @@ $\mathbf{\hat{a}}$ with the spin polarized along direction $\mathbf{\hat{b}}$.
 {\includegraphics[width=0.55\textwidth,angle=-90,origin=c]
 {figs/arrow_1omega.pdf}};
 
-\node[anchor=south west,inner sep=0] at (1.9, 1.3) 
+\node[anchor=south west,inner sep=0] at (2.2, 1.3) 
 {\includegraphics[width=0.40\textwidth]{figs/spin.pdf}};
 
 \end{tikzpicture}
@@ -1233,33 +1233,6 @@ quantifies the current injection along the direction $\mathrm{a}$.
 
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-% \begin{frame}
-
-
-% {\small
-
-% \begin{itemize}
-
-% \item 
-% A photocurrent can be injected materials or at the
-% surface of bulk centrosymmetric materials and is given by
-% \footnote[frame]{\tiny N. Arzate et al. Phys. Rev. B, 90(20):205310, 2014.}
-% \begin{equation*}
-% \mathbf{\dot{J}}^{\mathrm{a}}_{\text{inj}}(\omega) =
-% \eta^{abc}(\omega)E_{b}(\omega)E_{c}(\omega), \label{eq:current}
-% \end{equation*}
-% where $\eta^{abc}(\omega)$ is the current injection tensor which quantifies the
-% current injection along the direction $\mathrm{a}$.
-
-% \item The response was calculated layer by layer.
-
-
-% \end{itemize}
-% }
-% \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1365,6 +1338,9 @@ a given layer.
 \end{frame}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
@@ -1388,13 +1364,57 @@ a given layer.
 
 \begin{columns}
 
+
+\column{0.52\textwidth}
+\begin{center}
+\small 
+
+\vspace{-6mm}
+\includegraphics[width=1.0\textwidth]{figs/plots/dsp-up.pdf}
+
+\vspace{-4mm}
+
+\begin{figure}[h!]
+\begin{tikzpicture}
+
+\node[anchor=south west,inner sep=0,opacity=0.50] at (0.2,-0.3) 
+{\includegraphics[width=0.60\textwidth]{figs/up4.png}};
+
+\node[anchor=south west,inner sep=0] at (0.75,-0.15) 
+{\includegraphics[width=0.33\textwidth]{figs/coord18.pdf}};
+
+\end{tikzpicture}
+\end{figure}
+
+\vspace{-5mm}
+
+Response in the Mid Infrared
+
+0.084\,eV = 14.7\,$\mu$m = 20.3\,THz
+
+\end{center}
+
 \column{0.52\textwidth}
 \begin{center}
 \small
 
+\vspace{-5mm}   
 \includegraphics[width=0.99\textwidth]{figs/plots/dsp-alt.pdf}
-\vspace{3mm}
-\includegraphics[width=0.8\textwidth]{figs/alt2.png}
+
+\vspace{-4mm}
+\begin{figure}[h!]
+\begin{tikzpicture}
+
+\node[anchor=south west,inner sep=0,opacity=0.50] at (0.2,-0.3) 
+{\includegraphics[width=0.60\textwidth]{figs/alt4.png}};
+
+\node[anchor=south west,inner sep=0] at (0.60,-0.15) 
+{\includegraphics[width=0.25\textwidth]{figs/coord17.pdf}};
+
+\end{tikzpicture}
+\end{figure}
+
+\vspace{-3mm}
 
 Response in the Near Infrared
 
@@ -1402,34 +1422,19 @@ Response in the Near Infrared
 
 \end{center}
 
-
-
-\column{0.52\textwidth}
-\begin{center}
-\small 
-
-\vspace{-1mm}
-\includegraphics[width=1.0\textwidth]{figs/plots/dsp-up.pdf}
-\vspace{6mm}
-\includegraphics[width=0.7\textwidth]{figs/up2.png}
-
-\vspace{7mm}
-Response in the Mid Infrared
-
-0.084\,eV = 14.7\,$\mu$m = 20.3\,THz
-
-\end{center}
-
-
 \end{columns}
 
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Spin velocity injection}
 %%%%%%%%%%%%%%%%%%%%%%%
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
 
@@ -1449,7 +1454,6 @@ Response in the Mid Infrared
 \begin{figure}[h!]
 \begin{tikzpicture}
 
-
 \node[anchor=south west,inner sep=0,opacity=0.40] at (0.2,-0.3) 
 {\includegraphics[width=0.70\textwidth]{figs/up3.png}};
 
@@ -1463,7 +1467,6 @@ Response in the Mid Infrared
 
 \begin{figure}[h!]
 \begin{tikzpicture}
-
 
 \node[anchor=south west,inner sep=0,opacity=0.40] at (0.2,-0.3) 
 {\includegraphics[width=0.70\textwidth]{figs/alt3.png}};
@@ -1841,7 +1844,6 @@ $\varphi_{\mathrm{y}} = 51.9^{\circ}$
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
 
@@ -1929,20 +1931,6 @@ $\varphi_{\mathrm{y}} = 163.4^{\circ}$
 
 \column{0.52\textwidth}
 \begin{center}
-\small
-
-\includegraphics[width=0.99\textwidth]{figs/plots/eta-alt_y.pdf}
-\vspace{3mm}
-\includegraphics[width=0.8\textwidth]{figs/alt2.png}
-
-Intense response in the Near Infrared
-
-0.95\,eV = 230\,$\mu$m
-
-\end{center}
-
-\column{0.52\textwidth}
-\begin{center}
 \small 
 
 \vspace{-1mm}
@@ -1957,6 +1945,19 @@ Response in the Mid Infrared
 
 \end{center}
 
+\column{0.52\textwidth}
+\begin{center}
+\small
+
+\includegraphics[width=0.99\textwidth]{figs/plots/eta-alt_y.pdf}
+\vspace{3mm}
+\includegraphics[width=0.8\textwidth]{figs/alt2.png}
+
+Intense response in the Near Infrared
+
+0.95\,eV = 230\,$\mu$m
+
+\end{center}
 
 \end{columns}
 
@@ -1979,20 +1980,6 @@ Response in the Mid Infrared
 
 \column{0.52\textwidth}
 \begin{center}
-\small
-
-\includegraphics[width=0.99\textwidth]{figs/plots/shg-lay-alt.pdf}
-\vspace{3mm}
-\includegraphics[width=0.8\textwidth]{figs/alt2.png}
-
-Intense response in the Near Infrared
-
-0.95\,eV = 230\,$\mu$m
-
-\end{center}
-
-\column{0.52\textwidth}
-\begin{center}
 \small 
 
 \vspace{-1mm}
@@ -2008,207 +1995,18 @@ Response in the Mid Infrared
 \end{center}
 
 
-\end{columns}
-
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Conclusions and perspectives} 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Conclusions}
-%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{frame}
-
-
-{\Large Conclusions}
-{\small
-
-\begin{itemize}
-
-\item 
-Due to the fact that both structures are high non-centrosymmetric materials,
-then it is possible to induced high intensity nonlinear responses in them.
-
-\item 
-Both structures are excellent candidates for spintronics applications:
-
-\begin{itemize}
-\item[$\boldsymbol{\ast}$] 
-We found that the \emph{up} is more spin--polarizable than the \emph{alt} but
-both reaches more than 50\% of DSP.
-
-\item[$\boldsymbol{\ast}$] 
-It is possible to generate pure-spin currents in our structures; also it is
-possible to control the spin orientation or the current direction making
-variations in the angle of the polarization of the incoming beam.
-
-\item[$\boldsymbol{\ast}$] 
-The spin velocities reached in the structures are usable for spintronics
-devices.
-
-\end{itemize}
-
-\item 
-The \emph{up} structure can achieve a large injection current being the
-response bigger than most of other structures. \footnote[frame]{\tiny R.
-Zapata-Pe\~na, \emph{et. al.} Phys. Rev. B 96, 195415, 2017.}
-
-\item 
-Both structures are excellent candidates to generate second harmonic,
-particularly the \emph{up} one.
-
-
-\end{itemize}
-}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Articles, conferences and courses}
-%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-    
-\begin{columns}
-
-\column{0.5\textwidth}
-
-{\Large Articles}
-
-{\small
-\begin{itemize}
-
-\vspace{-2mm}
-\item 
-R. Zapata-Pe\~na, \emph{et. al.} Pure spin current injection in hydrogenated
-   graphene structures. Phys. Rev. B 96, 195415, 2017.
-
-\vspace{-2mm}
-\item 
-Anatoli I. Shkrebtii, R. Zapata-Pe\~na, \emph{et. al.} Graphene-Boron Nitride
-   2D Heterosystems Functionalized with Hydrogen. Advances in Science and
-   Technology 98:117-124, 2017.
-
-\vspace{-2mm}
-\item 
-R. Zapata-Pe\~na, \emph{et. al.} Nonlinear optical responses in hydrogenated
-   graphene structures. Phys. Stat. Sol. (b), 253(2):226-233, 2016.
-
-\end{itemize}
-
-}
-
-\column{0.5\textwidth}
-
-\includegraphics[width=1.0\textwidth]{figs/cover.pdf}
-
-\end{columns}
-
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{frame}
-
-{\Large Conferences}
-
-\begin{itemize}
-
-\item IX Riao-Optilas 2016 (Poster)\\
-\footnotesize{IX Reuni\'on Iberoamericana de \'Optica y XII Reuni\'on
-Iberoamericana de \'Optica, L\'aseres y Aplicaciones. Puc\'on, Chile.}
-
-\item OSI-11 2015 (Poster) \\
-\footnotesize{The International Conference on Optics of Surfaces and
-Interfaces. Austin, Texas, USA.}
-
-\end{itemize}
-
-\vspace{7mm}
-
-{\Large Specialized courses}
-
-\begin{itemize}
-
-\item Control de versiones usando Git y GitHub (2013)
-\item C\'omputo en paralelo mediante FORTRAN/C++ con MPI y OpenMP (2013)
-\item C\'alculo de propiedades o\'opticas de la materia con el uso de teor\'ia
-de muchos cuerpos (2013)
-
-\end{itemize}
-
-
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Conclusions}
-%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-\begin{frame}
-
-{\Large Perspectives}
-
+\column{0.52\textwidth}
+\begin{center}
+\small
+
+\includegraphics[width=0.99\textwidth]{figs/plots/shg-lay-alt.pdf}
 \vspace{3mm}
+\includegraphics[width=0.8\textwidth]{figs/alt2.png}
 
-Continue the study of this phenomenon in other structures and make new
-publication:
+Intense response in the Near Infrared
 
-\begin{columns}
+0.95\,eV = 230\,$\mu$m
 
-\column{0.45\textwidth}
-
-\begin{center}
-\includegraphics[width=0.78\textwidth]{figs/hnbGh-aa-1.png}\\
-\includegraphics[width=0.78\textwidth]{figs/hnbGh-ab-1.png}
-
-Functionalized boron-nitride-graphene with hydrogen
-\end{center}
-
-
-\column{0.45\textwidth}
-
-
-\begin{columns}
-
-\vspace{-4mm}
-\column{0.5\textwidth}
-
-\includegraphics[width=1.0\textwidth]{figs/7-bnnt-1.png}
-
-\column{0.5\textwidth}
-\includegraphics[width=1.0\textwidth]{figs/7-bnnt-2.png}\\
-\includegraphics[width=1.0\textwidth]{figs/7-bnnt-3.png}
-
-\end{columns}
-
-\begin{center}
-Boron-nitride nanotubes
 \end{center}
 
 
@@ -2217,50 +2015,254 @@ Boron-nitride nanotubes
 \end{frame}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Acknowledgments} 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Conclusions and perspectives} 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}
 
-\begin{center}
+
+% %%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Conclusions}
+% %%%%%%%%%%%%%%%%%%%%%%%
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% \begin{frame}
+
+
+% {\Large Conclusions}
+% {\small
+
+% \begin{itemize}
+
+% \item 
+% Due to the fact that both structures are high non-centrosymmetric materials,
+% then it is possible to induced high intensity nonlinear responses in them.
+
+% \item 
+% Both structures are excellent candidates for spintronics applications:
+
+% \begin{itemize}
+% \item[$\boldsymbol{\ast}$] 
+% We found that the \emph{up} is more spin--polarizable than the \emph{alt} but
+% both reaches more than 50\% of DSP.
+
+% \item[$\boldsymbol{\ast}$] 
+% It is possible to generate pure-spin currents in our structures; also it is
+% possible to control the spin orientation or the current direction making
+% variations in the angle of the polarization of the incoming beam.
+
+% \item[$\boldsymbol{\ast}$] 
+% The spin velocities reached in the structures are usable for spintronics
+% devices.
+
+% \end{itemize}
+
+% \item 
+% The \emph{up} structure can achieve a large injection current being the
+% response bigger than most of other structures. \footnote[frame]{\tiny R.
+% Zapata-Pe\~na, \emph{et. al.} Phys. Rev. B 96, 195415, 2017.}
+
+% \item 
+% Both structures are excellent candidates to generate second harmonic,
+% particularly the \emph{up} one.
+
+
+% \end{itemize}
+% }
+
+% \end{frame}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Articles, conferences and courses}
+% %%%%%%%%%%%%%%%%%%%%%%%
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{frame}
     
-{\Large Acknowledgments}
+% \begin{columns}
 
-\begin{itemize}
-\item Dr. Bernardo Mendoza
-\item Dr. Ram\'on Carriles Jaimes
-\item Dr. Gabriel Merino Hern\'adez
-\item My friend Dr. Sean M. Anderson
-\item My wife, Patricia, and my kids 
-\item My mother, Eloisa
-\item My sisters
-\item All my friends who shared time with me
-\item The CIO
-\item The CONACYT
-\end{itemize}
+% \column{0.5\textwidth}
 
-\end{center}
+% {\Large Articles}
 
-\end{frame}
+% {\small
+% \begin{itemize}
+
+% \vspace{-2mm}
+% \item 
+% R. Zapata-Pe\~na, \emph{et. al.} Pure spin current injection in hydrogenated
+%    graphene structures. Phys. Rev. B 96, 195415, 2017.
+
+% \vspace{-2mm}
+% \item 
+% Anatoli I. Shkrebtii, R. Zapata-Pe\~na, \emph{et. al.} Graphene-Boron Nitride
+%    2D Heterosystems Functionalized with Hydrogen. Advances in Science and
+%    Technology 98:117-124, 2017.
+
+% \vspace{-2mm}
+% \item 
+% R. Zapata-Pe\~na, \emph{et. al.} Nonlinear optical responses in hydrogenated
+%    graphene structures. Phys. Stat. Sol. (b), 253(2):226-233, 2016.
+
+% \end{itemize}
+
+% }
+
+% \column{0.5\textwidth}
+
+% \includegraphics[width=1.0\textwidth]{figs/cover.pdf}
+
+% \end{columns}
+
+% \end{frame}
 
 
-{
-\usebackgroundtemplate{\includegraphics[height=\paperheight,width=\paperwidth]
-{figs/end.jpg}}
-\begin{frame}[plain,noframenumbering]
-\end{frame}
-}
-
-\begin{frame}[plain,noframenumbering]
-
-\end{frame}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{frame}[noframenumbering]
+% \begin{frame}
+
+% {\Large Conferences}
+
+% \begin{itemize}
+
+% \item IX Riao-Optilas 2016 (Poster)\\
+% \footnotesize{IX Reuni\'on Iberoamericana de \'Optica y XII Reuni\'on
+% Iberoamericana de \'Optica, L\'aseres y Aplicaciones. Puc\'on, Chile.}
+
+% \item OSI-11 2015 (Poster) \\
+% \footnotesize{The International Conference on Optics of Surfaces and
+% Interfaces. Austin, Texas, USA.}
+
+% \end{itemize}
+
+% \vspace{7mm}
+
+% {\Large Specialized courses}
+
+% \begin{itemize}
+
+% \item Control de versiones usando Git y GitHub (2013)
+% \item C\'omputo en paralelo mediante FORTRAN/C++ con MPI y OpenMP (2013)
+% \item C\'alculo de propiedades o\'opticas de la materia con el uso de teor\'ia
+% de muchos cuerpos (2013)
+
+% \end{itemize}
 
 
-\end{frame}
+% \end{frame}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Conclusions}
+% %%%%%%%%%%%%%%%%%%%%%%%
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% \begin{frame}
+
+% {\Large Perspectives}
+
+% \vspace{3mm}
+
+% Continue the study of this phenomenon in other structures and make new
+% publication:
+
+% \begin{columns}
+
+% \column{0.45\textwidth}
+
+% \begin{center}
+% \includegraphics[width=0.78\textwidth]{figs/hnbGh-aa-1.png}\\
+% \includegraphics[width=0.78\textwidth]{figs/hnbGh-ab-1.png}
+
+% Functionalized boron-nitride-graphene with hydrogen
+% \end{center}
+
+
+% \column{0.45\textwidth}
+
+
+% \begin{columns}
+
+% \vspace{-4mm}
+% \column{0.5\textwidth}
+
+% \includegraphics[width=1.0\textwidth]{figs/7-bnnt-1.png}
+
+% \column{0.5\textwidth}
+% \includegraphics[width=1.0\textwidth]{figs/7-bnnt-2.png}\\
+% \includegraphics[width=1.0\textwidth]{figs/7-bnnt-3.png}
+
+% \end{columns}
+
+% \begin{center}
+% Boron-nitride nanotubes
+% \end{center}
+
+
+% \end{columns}
+
+% \end{frame}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Acknowledgments} 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{frame}
+
+% \begin{center}
+    
+% {\Large Acknowledgments}
+
+% \begin{itemize}
+% \item Dr. Bernardo Mendoza
+% \item Dr. Ram\'on Carriles Jaimes
+% \item Dr. Gabriel Merino Hern\'adez
+% \item My friend Dr. Sean M. Anderson
+% \item My wife, Patricia, and my kids 
+% \item My mother, Eloisa
+% \item My sisters
+% \item All my friends who shared time with me
+% \item The CIO
+% \item The CONACYT
+% \end{itemize}
+
+% \end{center}
+
+% \end{frame}
+
+
+% {
+% \usebackgroundtemplate{\includegraphics[height=\paperheight,width=\paperwidth]
+% {figs/end.jpg}}
+% \begin{frame}[plain,noframenumbering]
+% \end{frame}
+% }
+
+% \begin{frame}[plain,noframenumbering]
+
+% \end{frame}
+
+
+% \begin{frame}[noframenumbering]
+
+
+% \end{frame}
 
 
 
