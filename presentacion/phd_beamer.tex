@@ -1,9 +1,13 @@
 \documentclass{beamer}
 \usetheme{Antibes} % Antibes Dresden Frankfurt
-\setbeamertemplate{navigation symbols}{} 
 \usefonttheme[onlymath]{serif}
 \usecolortheme{default}
-\setbeamertemplate{navigation symbols}{} 
+\setbeamertemplate{navigation symbols}
+{%
+  \vbox{%
+  \hbox{\insertslidenavigationsymbol}
+  }%
+} 
 \usepackage{amsmath}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
@@ -473,53 +477,6 @@ noncentrosymmetric crystals.\footnote[frame]{\tiny Boyd, Robert W. Nonlinear opt
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Alt structure}
-%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{frame}
-
-\vspace{-3mm}
-\begin{columns}
-
-\column{0.7\textwidth}
-\flushright
-\includegraphics[width=0.9\textwidth]{figs/alt1.pdf}
-
-\vspace{5mm}
-
-\column{0.3\textwidth}
-\flushleft
-\includegraphics[width=0.9\textwidth]{figs/arrows1.pdf}
-
-\end{columns}
-
-\vspace{-5mm}
-
-\begin{columns}
-
-\column{0.7\textwidth}
-\flushright
-\includegraphics[width=0.9\textwidth]{figs/alt2.pdf}
-
-\vspace{5mm}
-
-\column{0.3\textwidth}
-\flushleft
-\includegraphics[width=0.9\textwidth]{figs/arrows2.pdf}
-
-\end{columns}
-
-\vspace{-4mm}
-\begin{center}
-{\Large Alt structure:} 50\% hydrogenation; hydrogen at bot sides.
-\end{center}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 %%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Up structure}
@@ -569,6 +526,53 @@ noncentrosymmetric crystals.\footnote[frame]{\tiny Boyd, Robert W. Nonlinear opt
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Alt structure}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+
+\vspace{-3mm}
+\begin{columns}
+
+\column{0.7\textwidth}
+\flushright
+\includegraphics[width=0.9\textwidth]{figs/alt1.pdf}
+
+\vspace{5mm}
+
+\column{0.3\textwidth}
+\flushleft
+\includegraphics[width=0.9\textwidth]{figs/arrows1.pdf}
+
+\end{columns}
+
+\vspace{-5mm}
+
+\begin{columns}
+
+\column{0.7\textwidth}
+\flushright
+\includegraphics[width=0.9\textwidth]{figs/alt2.pdf}
+
+\vspace{5mm}
+
+\column{0.3\textwidth}
+\flushleft
+\includegraphics[width=0.9\textwidth]{figs/arrows2.pdf}
+
+\end{columns}
+
+\vspace{-4mm}
+\begin{center}
+{\Large Alt structure:} 50\% hydrogenation; hydrogen at bot sides.
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
@@ -651,22 +655,21 @@ B, 90(20):205310, 2014.}
 \item 
 The Spin generation rate and the carrier generation rate can be written as
 \vspace{-4mm}
-\begin{align*}
+\begin{align}
 \dot{S}^{a}(\omega)&= 
 \zeta^{abc}(\omega)E^{b}(-\omega)E^{c}(\omega), \\
 \dot{n}(\omega)&= 
 \xi^{ab}(\omega)E^{a}(-\omega)E^{b}(\omega),
-\end{align*}
+\end{align}
 where $\zeta^{abc}(\omega)$ is the spin injection rate tensor and and $\xi^
 {ab}(\omega)$ is the carrier generation rate tensor.
 
 \item 
 The degree of spin polarization (DSP) quantifies the fraction of injected
-electrons
-in the conduction bands that are spin polarized along direction $a$ and is
-given by
+electrons in the conduction bands that are spin polarized along direction $a$
+and is from previous equations is given by
 \vspace{-2mm}
-\begin{equation}
+\begin{equation}\label{eq:dsp}
 \mathcal{D}^{a}(\omega)=
 \frac{\dot{S}^{a}(\omega)}{(\hbar/2)\dot{n}(\omega)}
 \end{equation}
@@ -776,11 +779,10 @@ noncentrosymmetric materials\footnote[frame]{\tiny A. Najmaie
 et. al. Phys. Rev. B, 68(16):165348, 2003.} and is given by\footnote[frame]
 {\tiny Reinaldo Zapata-Pe\~na et. al. Phys. Rev. B 96, 195415. 2017}
 % \vspace{-2mm}
-\begin{equation}
+\begin{equation}\label{eq:psc}
 \dot{K}^{\mathrm{ab}}(\omega) =
 \mu^{\mathrm{abcd}}(\omega)
 E^{\mathrm{c}}(\omega) E^{\mathrm{d*}}(\omega),
-\label{eq:dotk}
 \end{equation}
 where $\mu^{\mathrm{abcd}}(\omega)$ is the pseudotensor that describes the rate
 of change of the PSC.
@@ -1218,10 +1220,10 @@ and on the surface of 2D systems%
 
 The optical current injection is given by
 \vspace{-1mm}
-\begin{equation*}
+\begin{equation}\label{eq:oci}
 \mathbf{\dot{J}}^{\mathrm{a}}_{\text{inj}}(\omega) =
-\eta^{abc}(\omega)E_{b}(\omega)E_{c}(\omega), \label{eq:current}
-\end{equation*}
+\eta^{abc}(\omega)E_{b}(\omega)E_{c}(\omega),
+\end{equation}
 
 \vspace{-2mm}
 where $\eta^{\mathrm{abc}}(\omega)$ is the current injection tensor which 
@@ -1318,19 +1320,19 @@ SHG spectroscopy offer a non-invasive technique to study material properties.
 \item 
 The second-order nonlinear polarization is given by
 \footnote[frame]{\tiny S. M. Anderson et al. Phys. Rev. B, 91(7):075302, 2015.}
-\begin{equation*}\label{eq:pol}
+\begin{equation}\label{eq:shg}
 \mathcal{P}(2\omega) = 
 \chi^{abc}(-2\omega;\omega,\omega)E^{b}(\omega)E^{c}(\omega),
-\end{equation*} 
+\end{equation} 
 where $\chi^{abc}(-2\omega;\omega,\omega)$ is the nonlinear susceptibility
 tensor responsible for the SHG.
 
 \item 
 The formalism includes\textsuperscript{ 1}
 \begin{itemize}
-\item [$-$] the scissors correction,
-\item [$-$] the contribution of the nonlocal part of the pseudopotentials
-\item [$-$] the cut function used to select the individual contribution for
+\item [$-$] The scissors correction,
+\item [$-$] The contribution of the nonlocal part of the pseudopotentials
+\item [$-$] The cut function used to select the individual contribution for
 a given layer.
 \end{itemize}
 
@@ -1360,7 +1362,7 @@ a given layer.
 \begin{frame}
 
 \begin{center}
-{\Large Degree of spin polarization}
+{\Large Degree of spin polarization {\small (Eq. \ref{eq:dsp})}}
 \end{center}
 
 \begin{columns}
@@ -1486,11 +1488,10 @@ Response in the Near Infrared
 \vspace{-3mm}
 
 Components with maximum values of $\mathcal{V}^{\mathrm{ab}}$ for the
-\emph{alt}, \emph{up}, CdSe and GaAs structures.
+\emph{alt}, \emph{up}, CdSe and GaAs structures (Eq. \ref{eq:psc}).
 
 
 \end{center}
-
 \column{0.55\textwidth}
 
 \vspace{-5mm}
@@ -1541,12 +1542,12 @@ Is maximized for $\hbar \omega = 0.084\,eV$
 
 \vspace{-1mm}
 \item 
-The absolute maxima is 739.7\,Km/s for $\alpha = 35^{\circ}$
+The absolute maxima is 740\,Km/s for $\alpha = 35^{\circ}$
 
 \vspace{-1mm}
 \item 
 The velocity is directed almost at a constant angle $\gamma_{\sigma^{z}} =
-64.5^
+65^
 {\circ}$
 
 \end{itemize}
@@ -1594,11 +1595,11 @@ A local maxima is found for $\hbar \omega = 1.954$\,eV (634\,nm, visible
 red)
 
 \item 
-The maxima is 193.5\,Km/s for $\alpha = 35^{\circ}$
+The maxima is 193\,Km/s for $\alpha = 35^{\circ}$
 
 \item 
-The velocity angle $\gamma_{\sigma^{z}}$ has values between $75.5^{\circ}$
-and $77.8^{\circ}$
+The velocity angle $\gamma_{\sigma^{z}}$ has values between $75^{\circ}$
+and $78^{\circ}$
 
 \end{itemize}
 
@@ -2137,11 +2138,11 @@ R. Zapata-Pe\~na, \emph{et. al.} Nonlinear optical responses in hydrogenated
 \begin{itemize}
 
 \item IX Riao-Optilas 2016 (Poster)\\
-\footnotesize{IX Reuni\'on Iberoamericana de \'Optica y XII Reuni\'on
+{\footnotesize IX Reuni\'on Iberoamericana de \'Optica y XII Reuni\'on
 Iberoamericana de \'Optica, L\'aseres y Aplicaciones. Puc\'on, Chile.}
 
 \item OSI-11 2015 (Poster) \\
-\footnotesize{The International Conference on Optics of Surfaces and
+{\footnotesize The International Conference on Optics of Surfaces and
 Interfaces. Austin, Texas, USA.}
 
 \end{itemize}
@@ -2154,7 +2155,7 @@ Interfaces. Austin, Texas, USA.}
 
 \item Control de versiones usando Git y GitHub (2013)
 \item C\'omputo en paralelo mediante FORTRAN/C++ con MPI y OpenMP (2013)
-\item C\'alculo de propiedades o\'opticas de la materia con el uso de teor\'ia
+\item C\'alculo de propiedades \'opticas de la materia con el uso de teor\'ia
 de muchos cuerpos (2013)
 
 \end{itemize}
